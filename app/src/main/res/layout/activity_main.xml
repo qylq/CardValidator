@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/CardNumberInput"
+        android:layout_width="285dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="63dp"
+        android:digits="0123456789"
+        android:ems="10"
+        android:hint="Card number here"
+        android:inputType="number"
+        android:maxLength="16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name" />
+
+    <Button
+        android:id="@+id/ValidateCardNumber"
+        android:layout_width="193dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="109dp"
+        android:onClick="check"
+        android:text="Check"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardNumberInput"
+        app:toggleCheckedStateOnClick="true" />
+
+    <TextView
+        android:id="@+id/NumberValidationResult"
+        android:layout_width="415dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="62dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ValidateCardNumber" />
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="222dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="94dp"
+        android:text="Card Validator"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
