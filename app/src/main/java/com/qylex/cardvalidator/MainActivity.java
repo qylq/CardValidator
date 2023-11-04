@@ -30,21 +30,24 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        /*
         int[] digitsFromNumber = new int[16];
         for (int i = 0; i < 16; i++) {
             digitsFromNumber[i] = Character.getNumericValue(cardNumber.charAt(i));
         }
+        */
 
         int sum = 0;
 
         for (int i = 0; i < 16; i++) {
+            int digit = Character.getNumericValue(cardNumber.charAt(i));
             if (i % 2 == 0) {
-                digitsFromNumber[i] *= 2;
-                if (digitsFromNumber[i] > 9) {
-                    digitsFromNumber[i] -= 9;
+                digit *= 2;
+                if (digit > 9) {
+                    digit -= 9;
                 }
             }
-            sum += digitsFromNumber[i];
+            sum += digit;
         }
 
         if (sum % 10 == 0) {
