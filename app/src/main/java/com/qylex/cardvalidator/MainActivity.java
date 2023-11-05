@@ -30,13 +30,6 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        /*
-        int[] digitsFromNumber = new int[16];
-        for (int i = 0; i < 16; i++) {
-            digitsFromNumber[i] = Character.getNumericValue(cardNumber.charAt(i));
-        }
-        */
-
         int sum = 0;
 
         for (int i = 0; i < 16; i++) {
